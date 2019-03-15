@@ -1,0 +1,30 @@
+int C1 = 3;
+int C2 = 5;
+int C3 = 6;
+int POT1 = 0; int POT2 = 1; int POT3 = 3;
+int a
+int b;
+int c;
+int d;
+int e;
+int f;
+configuración vacía () {
+pinMode (C1, SALIDA); pinMode (C2, SALIDA); pinMode (C3, SALIDA);
+
+Serial.begin (9600);
+}
+bucle de vacío () {
+  retraso (100);
+  
+escritura digital (C1, BAJA); escritura digital (C2, BAJA); escritura digital (C3, BAJA);
+a = analogRead (POT1); b = analogRead (POT2); c = analogRead (POT3);
+
+d = mapa (a, 0,1023,0,255); Serial.println (d);
+e = mapa (b, 0,1023,0,255); Serial.println (e);
+f = mapa (c, 0,1023,0,255); Serial.println (f);
+
+escritura analógica (C1, d);
+escritura analógica (C2, e);
+escritura analógica (C3, f);
+
+}
